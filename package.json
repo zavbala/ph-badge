@@ -1,0 +1,52 @@
+{
+  "name": "ph-badge",
+  "version": "0.0.1",
+  "description": "Use Product Hunt badge on your website",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.js",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
+  "types": "dist/types/index.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/ph-badge/ph-badge.esm.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zavbala/ph-badge"
+  },
+  "files": [
+    "dist/",
+    "loader/"
+  ],
+  "scripts": {
+    "build": "stencil build --docs",
+    "start": "stencil build --dev --watch --serve",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "generate": "stencil generate",
+    "format": "prettier --write .",
+    "sweep": "rm -rf dist/ && rm -rf loader/"
+  },
+  "dependencies": {
+    "@stencil/core": "^3.3.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.3",
+    "@types/node": "^20.2.3",
+    "jest": "^27.0.3",
+    "jest-cli": "^27.4.5",
+    "puppeteer": "^20.4.0"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Jeremy Zabala",
+    "email": "jeremy.zbala@gmail.com"
+  },
+  "keywords": [
+    "badge",
+    "stencil",
+    "web component",
+    "product hunt",
+    "cross framework"
+  ]
+}
