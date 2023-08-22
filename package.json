@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "sweep": "rm -rf packages",
+    "sandbox": "turbo run dev --filter sandbox",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "mitosis": "turbo run build --filter mitosis && sh scripts/build.sh",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\" --ignore-path .gitignore"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.8"
+  }
+}

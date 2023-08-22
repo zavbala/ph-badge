@@ -1,0 +1,53 @@
+---
+title: "Theming"
+---
+
+import Badge from "../../packages";
+import Callout from "../../components/Callout";
+
+<Callout type='warning'>All the samples below are using jsx syntax, be careful.</Callout>
+
+The component has the next default styles:
+
+```json
+{
+  "zIndex": "10",
+  "display": "flex",
+  "borderRadius": "4px",
+  "padding": "10px 15px",
+  "fontFamily": "inherit",
+  "alignItems": "center",
+  "justifyContent": "space-between"
+}
+```
+
+<Callout>
+  Providing a `styles` prop will override the default styles or add new ones, under the hood spread
+  operator is used.
+</Callout>
+
+Using `color` prop will change the next things:
+
+- text color
+- border color
+- product hunt icon color
+
+## Wanna change the position of the badge?
+
+You can use `styles` prop to change the position of the badge.
+
+```json
+{
+  "right": "3",
+  "bottom": "3",
+  "position": "fixed"
+}
+```
+
+## Wanna use a different Background Color?
+
+Set a new backgroundColor for your badge, define `backgroundColor` prop.
+
+```jsx
+<Badge backgroundColor='#000' />
+```

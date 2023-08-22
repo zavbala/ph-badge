@@ -1,0 +1,8 @@
+.turbo
+node_modules
+
+dist
+output
+packages
+
+.DS_Store

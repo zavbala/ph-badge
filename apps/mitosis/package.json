@@ -1,0 +1,26 @@
+{
+  "name": "mitosis",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "mitosis": "mitosis build",
+    "build": "pnpm run mitosis",
+    "start": "watch 'pnpm run mitosis' ./src"
+  },
+  "dependencies": {
+    "@builder.io/mitosis": "^0.0.106",
+    "@builder.io/mitosis-cli": "^0.0.64",
+    "node-fetch": "^3.3.1"
+  },
+  "devDependencies": {
+    "@builder.io/eslint-plugin-mitosis": "^0.0.14",
+    "@types/node-fetch": "^2.6.4",
+    "@typescript-eslint/eslint-plugin": "^5.59.9",
+    "@typescript-eslint/parser": "^5.59.9",
+    "eslint": "^8.42.0",
+    "prettier": "^2.8.8",
+    "typescript": "^5.1.3",
+    "watch": "^1.0.2"
+  }
+}

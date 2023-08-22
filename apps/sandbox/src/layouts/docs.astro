@@ -1,0 +1,79 @@
+---
+import Navigation from "../components/navigation.astro";
+import { CollectionEntry, getCollection } from "astro:content";
+import Footer from "../components/footer.astro";
+import { HamburgerMenuIcon } from "@radix-ui/react-icons";
+
+import "../../public/styles/global.css";
+
+const { title, description } = Astro.props;
+const pathname = new URL(Astro.request.url).pathname;
+const entries = await getCollection("docs");
+
+const Style =
+  "border-r border-gray-100/10 w-80 md:flex flex-col p-2 h-screen md:sticky top-0 gap-y-1";
+---
+
+<html>
+  <head>
+    <title>{title} / PH Badge</title>
+    <meta name='viewport' content='width=device-width' />
+  </head>
+
+  <body class='bg-[#161412] text-white'>
+    <Navigation />
+
+    <main class='flex max-w-7xl m-auto'>
+      <aside class:list={[Style, "flex hidden fixed left-0 bg-[#161412] z-50 w-72"]}>
+        <a
+          href='/docs'
+          class:list={[
+            pathname === "/docs" && "bg-gray-50/5",
+            "p-2 rounded lg:hover:bg-gray-100/5 text-sm",
+          ]}
+        >
+          Introduction
+        </a>
+
+        {
+          entries.map((entry, index) => (
+            <a
+              href={"/docs/" + entry.data.title.toLowerCase()}
+              class:list={[
+                pathname.includes(entry.slug) && "bg-gray-50/5",
+                "p-2 rounded lg:hover:bg-gray-100/5 text-sm",
+              ]}
+            >
+              {entry.data.title}
+            </a>
+          ))
+        }
+      </aside>
+
+      <section class='w-full p-5'>
+        <slot />
+      </section>
+
+      <aside class='lg:flex hidden w-80'></aside>
+    </main>
+
+    <button
+      id='menu'
+      type='button'
+      class='md:hidden block shadow fixed bottom-3 right-3 p-5 bg-[#161412]'
+    >
+      <HamburgerMenuIcon />
+    </button>
+
+    <Footer />
+  </body>
+</html>
+
+<script>
+  const btn = document.getElementById("menu") as HTMLButtonElement;
+
+  btn.addEventListener("click", () => {
+    const aside = document.querySelector("aside");
+    aside?.classList.toggle("hidden");
+  });
+</script>

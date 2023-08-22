@@ -1,0 +1,51 @@
+---
+title: "Props"
+---
+
+import Callout from "../../components/callout";
+
+```json
+{
+  "token": "string", // token value
+  "styles": "object", // custom styles
+  "product": "string", // product name
+  "compact": "boolean", // default false
+  "tagline": "string", // default "Featured on"
+  "color": "string", // hex color: default #FF6154,
+  "backgroundColor": "string" // hex color: default #FFFFFF,
+}
+```
+
+## Token
+
+<Callout type='warning'>
+  To retrieve your token, please visit your [Product Hunt
+  Dashboard](https://www.producthunt.com/v2/oauth/applications) and create a new application.
+</Callout>
+
+## Product
+
+<Callout>
+  The product name is the slug of the product you want to display. For example, if you want to
+  display this [product](https://www.producthunt.com/posts/ph-badge) you would use `ph-badge` as the
+  product name. This is the last part of the URL of the product.
+</Callout>
+
+## Styles
+
+<Callout>
+  You can customize the styles of the component by passing a `styles` object. See
+  [Theming](/docs/theming) to get a full guide how to customize the styles.
+</Callout>
+
+## Compact
+
+<Callout>
+  The compact prop will render a smaller version of the badge, only showing upvotes and logo.
+</Callout>
+
+## Tagline
+
+<Callout>
+  The tagline prop will render a custom tagline instead of the default `Featured on` phrase.
+</Callout>

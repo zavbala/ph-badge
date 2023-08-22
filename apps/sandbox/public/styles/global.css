@@ -1,0 +1,43 @@
+#callout a {
+  text-decoration: underline;
+  text-underline-offset: 0.25rem;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 1.8rem !important;
+  margin: 1rem 0px !important;
+}
+
+#callout p {
+  text-align: start;
+  margin: 0px !important;
+}
+
+p {
+  text-align: justify;
+  margin: 1rem 0px !important;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: circle !important;
+  list-style-position: inside !important;
+}
+
+.astro-code {
+  padding: 0.7rem !important;
+  border-radius: 5px !important;
+}
+
+p code {
+  opacity: 0.9;
+  padding: 1px 6px;
+  border-radius: 3px;
+  background-color: gray;
+}
+
+nav ul {
+  list-style-type: none !important;
+}

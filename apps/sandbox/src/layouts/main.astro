@@ -1,0 +1,26 @@
+---
+import Navigation from "../components/navigation.astro";
+import Footer from "../components/footer.astro";
+
+const { title, className, frontmatter } = Astro.props;
+---
+
+<html lang='en'>
+  <head>
+    <meta charset='utf-8' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <meta name='viewport' content='width=device-width' />
+    <meta name='generator' content={Astro.generator} />
+    <title>{title} / PH Badge</title>
+  </head>
+
+  <body class='bg-[#161412] text-white'>
+    <Navigation />
+
+    <main class:list={["flex flex-col max-w-7xl mx-auto lg:px-0 px-3", className]}>
+      <slot />
+    </main>
+
+    <Footer />
+  </body>
+</html>
