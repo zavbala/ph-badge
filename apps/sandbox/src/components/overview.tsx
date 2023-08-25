@@ -4,11 +4,9 @@ import cn from "classnames";
 // @ts-ignore
 import Badge from "@ph-badge/react";
 
-interface Props {}
-
 const Styles = "appearance-none rounded-md bg-gray-50/5 p-2 focus:outline-none";
 
-const Overview = ({}: Props) => {
+const Overview = () => {
   const [site, setSite] = useState("https://astro.build");
 
   const [state, setState] = useState({
