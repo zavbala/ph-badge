@@ -37,6 +37,7 @@ EOF
         "type": "git",
         "url": "https://github.com/zavbala/ph-badge"
     },
+    "type": "module",
     "description": "Use the PH Badge in your ${package_dir} app.",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",

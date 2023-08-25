@@ -11,4 +11,9 @@ export default defineConfig({
   experimental: { viewTransitions: true },
   integrations: [react(), tailwind(), mdx()],
   markdown: { shikiConfig: { theme: "one-dark-pro" } },
+  vite: {
+    ssr: {
+      noExternal: ["@ph-badge/react"],
+    },
+  },
 });
