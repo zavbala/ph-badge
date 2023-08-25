@@ -30,7 +30,7 @@ EOF
 
         cat <<EOF > package.json
 {
-    "name": "ph-badge-${package_dir}",
+    "name": "@ph-badge/${package_dir}",
     "version": "$VERSION",
     "author": "Jeremy Zabala",
     "repository": {
@@ -53,7 +53,8 @@ EOF
         with_suffix=$(suffix $package_dir)
 
         cat <<EOF > index.js
-export * from './Component${with_suffix}';
+import Component from './Component${with_suffix}';
+export default Component;
 EOF
 
         cd ..

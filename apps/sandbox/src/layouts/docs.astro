@@ -1,10 +1,10 @@
 ---
-import Navigation from "../components/navigation.astro";
-import { CollectionEntry, getCollection } from "astro:content";
-import Footer from "../components/footer.astro";
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
+import { getCollection } from "astro:content";
+import Footer from "../components/footer.astro";
+import Navigation from "../components/navigation.astro";
 
-import "../../public/styles/global.css";
+import "../../styles/global.css";
 
 const { title, description } = Astro.props;
 const pathname = new URL(Astro.request.url).pathname;
@@ -16,15 +16,23 @@ const Style =
 
 <html>
   <head>
-    <title>{title} / PH Badge</title>
+    <title>{title} - PH Badge</title>
     <meta name='viewport' content='width=device-width' />
+    <link rel='icon' type='image/svg+xml' href='/icon.svg' />
+
+    <meta name='generator' content={Astro.generator} />
+
+    <!-- <ViewTransitions /> -->
   </head>
 
   <body class='bg-[#161412] text-white'>
     <Navigation />
 
     <main class='flex max-w-7xl m-auto'>
-      <aside class:list={[Style, "flex hidden fixed left-0 bg-[#161412] z-50 w-72"]}>
+      <aside
+        id='navigation'
+        class:list={[Style, "flex hidden fixed left-0 bg-[#161412] z-50 w-72"]}
+      >
         <a
           href='/docs'
           class:list={[
@@ -66,14 +74,15 @@ const Style =
     </button>
 
     <Footer />
+
+    <script>
+      const btn = document.getElementById("menu") as HTMLButtonElement;
+
+      btn.addEventListener("click", () => {
+        const aside = document.getElementById("navigation") as HTMLElement;
+        aside?.classList.toggle("hidden");
+        console.log("clicked");
+      });
+    </script>
   </body>
 </html>
-
-<script>
-  const btn = document.getElementById("menu") as HTMLButtonElement;
-
-  btn.addEventListener("click", () => {
-    const aside = document.querySelector("aside");
-    aside?.classList.toggle("hidden");
-  });
-</script>

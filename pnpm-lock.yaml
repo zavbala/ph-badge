@@ -69,15 +69,18 @@ importers:
       '@astrojs/vue':
         specifier: ^2.2.1
         version: 2.2.1(@babel/core@7.22.10)(astro@2.10.12)(vite@4.4.9)(vue@3.3.4)
+      '@ph-badge/react':
+        specifier: workspace:^
+        version: link:../../packages/react
       '@radix-ui/react-icons':
         specifier: ^1.3.0
         version: 1.3.0(react@18.2.0)
       astro:
         specifier: ^2.10.12
         version: 2.10.12
-      ph-badge-react:
-        specifier: workspace:^
-        version: link:../../packages/react
+      classnames:
+        specifier: ^2.3.2
+        version: 2.3.2
       preact:
         specifier: ^10.17.1
         version: 10.17.1
@@ -117,8 +120,6 @@ importers:
         version: 0.11.1
 
   packages/alpine: {}
-
-  packages/ph-badge: {}
 
   packages/preact: {}
 
@@ -894,7 +895,7 @@ packages:
       '@babel/helper-module-imports': 7.22.5
       '@babel/helper-plugin-utils': 7.22.5
       '@babel/plugin-syntax-jsx': 7.22.5(@babel/core@7.22.10)
-      '@babel/types': 7.22.10
+      '@babel/types': 7.22.5
     dev: false
 
   /@babel/plugin-transform-typescript@7.22.10(@babel/core@7.22.10):
@@ -3049,6 +3050,10 @@ packages:
   /ci-info@3.8.0:
     resolution: {integrity: sha512-eXTggHWSooYhq49F2opQhuHWgzucfF2YgODK4e1566GQs5BIfP30B0oenwBJHfWxAs2fyPB1s7Mg949zLf61Yw==}
     engines: {node: '>=8'}
+    dev: false
+
+  /classnames@2.3.2:
+    resolution: {integrity: sha512-CSbhY4cFEJRe6/GQzIk5qXZ4Jeg5pcsP7b5peFSDpffpe1cqjASH/n9UTjBwOp6XpMSTwQ8Za2K5V02ueA7Tmw==}
     dev: false
 
   /clean-css@4.2.4:

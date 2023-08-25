@@ -16,4 +16,7 @@ export default defineConfig({
       theme: "one-dark-pro",
     },
   },
+  experimental: {
+    viewTransitions: true,
+  },
 });

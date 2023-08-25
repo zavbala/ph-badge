@@ -8,7 +8,7 @@ interface Props {
 
 const Variants = {
   info: "bg-gray-300/10",
-  danger: "bg-red-100/5 text-red-700",
+  danger: "bg-red-300/5 text-red-600",
   warning: "bg-yellow-300/10 text-yellow-600",
   success: "bg-green-100 border-green-500 text-green-700",
 };

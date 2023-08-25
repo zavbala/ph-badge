@@ -15,7 +15,7 @@ const post = Astro.props;
 const { Content } = await post.render();
 ---
 
-<Layout title={post.title} description={post.description}>
+<Layout title={post.data.title} description={post.description}>
   <h1 class='text-5xl font-bold capitalize mb-5'>{post.slug}</h1>
   <Content />
 </Layout>

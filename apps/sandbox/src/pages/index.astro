@@ -1,7 +1,6 @@
 ---
-import Layout from "../layouts/main.astro";
 import NPM from "../components/npm";
-// import Badge from "../../../../packages";
+import Layout from "../layouts/main.astro";
 ---
 
 <Layout
@@ -11,16 +10,4 @@ import NPM from "../components/npm";
 >
   <small>Multi-framework</small>
   <NPM client:load />
-
-  <!-- <Badge
-    client:load
-    token='fcyIsek9xv8VnnOHiLT4-0l4LDp8Z0ng0rSlF-l2XBg '
-    product='sargabot-2'
-    styles={{
-      right: 10,
-      bottom: 10,
-      position: "fixed",
-    }}
-    color='#0000ff'
-  /> -->
 </Layout>
