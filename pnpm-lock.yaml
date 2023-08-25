@@ -70,8 +70,8 @@ importers:
         specifier: ^2.2.1
         version: 2.2.1(@babel/core@7.22.10)(astro@2.10.12)(vite@4.4.9)(vue@3.3.4)
       '@ph-badge/react':
-        specifier: workspace:^
-        version: link:../../packages/react
+        specifier: 1.0.0
+        version: 1.0.0
       '@radix-ui/react-icons':
         specifier: ^1.3.0
         version: 1.3.0(react@18.2.0)
@@ -118,20 +118,6 @@ importers:
       prettier-plugin-astro:
         specifier: ^0.11.1
         version: 0.11.1
-
-  packages/alpine: {}
-
-  packages/preact: {}
-
-  packages/qwik: {}
-
-  packages/react: {}
-
-  packages/solid: {}
-
-  packages/svelte: {}
-
-  packages/vue: {}
 
 packages:
 
@@ -1904,6 +1890,10 @@ packages:
     dependencies:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.15.0
+
+  /@ph-badge/react@1.0.0:
+    resolution: {integrity: sha512-ofB1LX3nigpgT5k050na1XLQmdRC1LsEqBZe1MiIx3nIMA4MIe4vHu0Xt1ySYjHY8KiEIejXMWhWH4ZmjmCfBQ==}
+    dev: false
 
   /@pkgr/utils@2.4.2:
     resolution: {integrity: sha512-POgTXhjrTfbTV63DiFXav4lBHiICLKKwDeaKn9Nphwj7WH6m0hMMCaJkMyRWjgtPFyRKRVoMXXjczsTQRDEhYw==}
