@@ -8,7 +8,6 @@ import { defineConfig } from "astro/config";
 export default defineConfig({
   output: "static",
   adapters: [vercel({ analytics: true })],
-  experimental: { viewTransitions: true },
   integrations: [react(), tailwind(), mdx()],
   markdown: { shikiConfig: { theme: "one-dark-pro" } },
   vite: {

@@ -1,4 +1,5 @@
 ---
+import { ViewTransitions } from "astro:transitions";
 import Footer from "../components/footer.astro";
 import Navigation from "../components/navigation.astro";
 
@@ -15,7 +16,8 @@ const { title, className, frontmatter } = Astro.props;
 
     <title>{title} - PH Badge</title>
     <meta name='description' content='Enhanced Product Hunt badge for your products.' />
-    <!-- <ViewTransitions /> -->
+    
+    <ViewTransitions />
   </head>
 
   <body class='bg-[#161412] text-white'>

@@ -1,5 +1,4 @@
-import { ExclamationTriangleIcon, CheckCircledIcon, InfoCircledIcon } from "@radix-ui/react-icons";
-import { ReactNode } from "react";
+import { CheckCircledIcon, ExclamationTriangleIcon, InfoCircledIcon } from "@radix-ui/react-icons";
 
 interface Props {
   children?: React.ReactNode;

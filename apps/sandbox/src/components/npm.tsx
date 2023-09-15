@@ -1,13 +1,15 @@
 import { useState } from "react";
+import cn from "classnames";
 
 interface Props {
   show?: boolean;
+  width?: "fit" | "full" | string;
 }
 
 const Managers = ["npm", "yarn", "pnpm"];
 const Frameworks = ["react", "vue", "solid", "preact", "svelte", "alpine"];
 
-const NPM = ({ show = false }: Props) => {
+const NPM = ({ show = false, width = "full" }: Props) => {
   const [manager, setManager] = useState(0);
   const [framework, setFramework] = useState("react");
 
@@ -30,10 +32,13 @@ const NPM = ({ show = false }: Props) => {
           ))}
       </div>
 
-      <div className='rounded p-3 items-center justify-between flex shadow w-fit mb-5'>
-        <div className='space-x-2'>
-          <code>{command}</code>
-        </div>
+      <div
+        className={cn(
+          width === "full" ? "w-full" : "w-fit",
+          "rounded p-3 items-center justify-between flex shadow mb-5",
+        )}
+      >
+        <code className='space-x-2'>{command}</code>
 
         <button
           type='button'

@@ -3,6 +3,7 @@ import { HamburgerMenuIcon } from "@radix-ui/react-icons";
 import { getCollection } from "astro:content";
 import Footer from "../components/footer.astro";
 import Navigation from "../components/navigation.astro";
+import { ViewTransitions } from "astro:transitions";
 
 import "../../styles/global.css";
 
@@ -22,7 +23,7 @@ const Style =
 
     <meta name='generator' content={Astro.generator} />
 
-    <!-- <ViewTransitions /> -->
+    <ViewTransitions />
   </head>
 
   <body class='bg-[#161412] text-white'>
