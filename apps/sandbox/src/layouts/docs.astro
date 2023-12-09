@@ -1,5 +1,5 @@
 ---
-import { HamburgerMenuIcon } from "@radix-ui/react-icons";
+import { HamburgerMenuIcon, Cross2Icon } from "@radix-ui/react-icons";
 import { getCollection } from "astro:content";
 import Footer from "../components/footer.astro";
 import Navigation from "../components/navigation.astro";
@@ -23,7 +23,7 @@ const Style =
 
     <meta name='generator' content={Astro.generator} />
 
-    <ViewTransitions />
+    <!-- <ViewTransitions /> -->
   </head>
 
   <body class='bg-[#161412] text-white'>
@@ -32,7 +32,7 @@ const Style =
     <main class='flex max-w-7xl m-auto'>
       <aside
         id='navigation'
-        class:list={[Style, "flex hidden fixed left-0 bg-[#161412] z-50 w-72"]}
+        class:list={[Style, "flex hidden fixed left-0 bg-[#161412] z-50 w-64"]}
       >
         <a
           href='/docs'
@@ -49,8 +49,8 @@ const Style =
             <a
               href={"/docs/" + entry.data.title.toLowerCase()}
               class:list={[
-                pathname.includes(entry.slug) && "bg-gray-50/5",
                 "p-2 rounded lg:hover:bg-gray-100/5 text-sm",
+                pathname.includes(entry.slug) && "bg-gray-50/5",
               ]}
             >
               {entry.data.title}
@@ -80,9 +80,9 @@ const Style =
       const btn = document.getElementById("menu") as HTMLButtonElement;
 
       btn.addEventListener("click", () => {
+        console.log("clicked");
         const aside = document.getElementById("navigation") as HTMLElement;
         aside?.classList.toggle("hidden");
-        console.log("clicked");
       });
     </script>
   </body>

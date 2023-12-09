@@ -7,8 +7,8 @@ const Github = () => {
   const [stars, setStars] = useState(0);
 
   const retrieveStars = async () => {
-    const response = await fetch("https://api.github.com/repos/zavbala/ph-abdge"),
-      data = await response.json();
+    const response = await fetch("https://api.github.com/repos/zavbala/ph-badge");
+    const data = await response.json();
 
     setStars(data.stargazers_count);
   };
@@ -19,8 +19,8 @@ const Github = () => {
 
   return (
     <a
-      className={Link}
       target='_blank'
+      className={Link}
       rel='noreferrer noopener'
       href='https://github.com/zavbala/ph-badge'
     >
